@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Memories — Kasun & Dushani Wedding Memories</title>
+  <meta name="description" content="Watch the most beautiful video moments from Kasun & Dushani's wedding. From the first dance to the sparkler exit.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/videos.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav nav--transparent" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kasun & Dushani</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="story.html" class="nav__link">Our Story</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="ceremony.html" class="nav__link">Ceremony</a>
+        <a href="celebration.html" class="nav__link">Celebration</a>
+        <a href="videos.html" class="nav__link nav__link--active">Videos</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile-overlay" id="mobile-overlay">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="story.html" class="nav__mobile-link">Our Story</a>
+    <a href="gallery.html" class="nav__mobile-link">Gallery</a>
+    <a href="ceremony.html" class="nav__mobile-link">Ceremony</a>
+    <a href="celebration.html" class="nav__mobile-link">Celebration</a>
+    <a href="videos.html" class="nav__mobile-link">Videos</a>
+  </div>
+
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header">
+    <img 
+      class="page-header__bg" 
+      src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=85&auto=format" 
+      alt="Wedding venue evening"
+      loading="eager"
+    >
+    <div class="page-header__overlay"></div>
+    <div class="page-header__content">
+      <p class="page-header__subtitle" data-animate="fade-up">Moving Moments</p>
+      <h1 class="page-header__title" data-animate="fade-up" data-delay="1">Video Memories</h1>
+      <p class="page-header__description" data-animate="fade-up" data-delay="2">
+        Some moments need more than a photograph. These short films capture the laughter, the music, and the movement of our perfect day.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============ INTRO ============ -->
+  <section class="videos-intro">
+    <div class="container">
+      <p class="script-text" data-animate="fade-up">Press Play</p>
+      <div class="gold-divider" data-animate="fade-up" data-delay="1"></div>
+      <p class="videos-intro__text" data-animate="fade-up" data-delay="2">
+        A photograph freezes a moment, but a video brings it back to life. 
+        Watch these short clips and feel the love, hear the laughter, and 
+        relive the magic all over again.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============ FEATURED VIDEO ============ -->
+  <section class="featured-video" data-animate="fade-up">
+    <div class="featured-video__container">
+      <div class="featured-video__player" id="featured-player">
+        <video 
+          poster="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=1200&q=85&auto=format"
+          preload="metadata"
+          playsinline
+        >
+          <source src="https://videos.pexels.com/video-files/8503574/8503574-uhd_2560_1440_24fps.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/19366393/19366393-hd_1920_1080_25fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="featured-video__play-btn" id="featured-play-btn">
+          <div class="featured-video__play-icon"></div>
+          <span class="featured-video__play-label">Watch Our Story</span>
+        </div>
+      </div>
+      <div class="featured-video__caption">
+        <h3>The Wedding Film</h3>
+        <p>A cinematic highlight reel of our most precious moments</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ VIDEO GRID ============ -->
+  <section class="video-grid-section">
+    <div class="container text-center">
+      <span class="section-subtitle" data-animate="fade-up">Clip Collection</span>
+      <h2 class="section-heading" data-animate="fade-up" data-delay="1">Short & Sweet</h2>
+      <div class="gold-divider" data-animate="fade-up" data-delay="2"></div>
+      <p class="section-description" data-animate="fade-up" data-delay="3">
+        Quick clips that capture the spirit of each moment — from the ceremony to the last dance.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <!-- Video Card 1 -->
+      <div class="video-card" data-animate="fade-up" data-delay="1"
+           data-video-src="https://videos.pexels.com/video-files/8776110/8776110-uhd_2560_1440_25fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80&auto=format" alt="Ceremony highlight">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:38</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">The Ceremony</h4>
+          <p class="video-card__desc">The vows, the tears, the promise</p>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="video-card" data-animate="fade-up" data-delay="2"
+           data-video-src="https://videos.pexels.com/video-files/19366393/19366393-hd_1920_1080_25fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=600&q=80&auto=format" alt="First dance">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:24</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">First Dance</h4>
+          <p class="video-card__desc">Swaying to the rhythm of love</p>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="video-card" data-animate="fade-up" data-delay="3"
+           data-video-src="https://videos.pexels.com/video-files/8247136/8247136-hd_1080_1920_25fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=600&q=80&auto=format" alt="Confetti exit">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:15</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">Confetti Exit</h4>
+          <p class="video-card__desc">The most joyful exit ever</p>
+        </div>
+      </div>
+
+      <!-- Video Card 4 -->
+      <div class="video-card" data-animate="fade-up" data-delay="1"
+           data-video-src="https://videos.pexels.com/video-files/9122168/9122168-uhd_1440_2560_25fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&auto=format" alt="Couple dancing">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:42</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">Two Hearts</h4>
+          <p class="video-card__desc">Lost in each other's arms</p>
+        </div>
+      </div>
+
+      <!-- Video Card 5 -->
+      <div class="video-card" data-animate="fade-up" data-delay="2"
+           data-video-src="https://videos.pexels.com/video-files/31252870/13347144_1440_2560_30fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&q=80&auto=format" alt="Dance floor party">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:30</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">Dance Floor</h4>
+          <p class="video-card__desc">When the dance floor came alive</p>
+        </div>
+      </div>
+
+      <!-- Video Card 6 -->
+      <div class="video-card" data-animate="fade-up" data-delay="3"
+           data-video-src="https://videos.pexels.com/video-files/4441795/4441795-hd_1920_1080_30fps.mp4">
+        <div class="video-card__thumbnail">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80&auto=format" alt="Sparkler exit">
+          <div class="video-card__play">
+            <div class="video-card__play-circle"></div>
+          </div>
+          <span class="video-card__duration">0:18</span>
+        </div>
+        <div class="video-card__info">
+          <h4 class="video-card__title">Sparkler Send-Off</h4>
+          <p class="video-card__desc">The grand finale under the stars</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ VIDEO MODAL ============ -->
+  <div class="video-modal" id="video-modal">
+    <button class="video-modal__close" id="video-modal-close" aria-label="Close video">✕</button>
+    <div class="video-modal__container">
+      <video id="modal-video" controls playsinline>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+
+  <!-- ============ CTA SECTION ============ -->
+  <section class="section" style="background:var(--color-cream); text-align:center;">
+    <div class="container">
+      <p class="script-text" data-animate="fade-up">Explore More</p>
+      <h2 class="section-heading" data-animate="fade-up" data-delay="1" style="margin-bottom:var(--space-lg);">Continue the Journey</h2>
+      <div style="display:flex; justify-content:center; gap:var(--space-lg); flex-wrap:wrap;" data-animate="fade-up" data-delay="2">
+        <a href="gallery.html" class="btn btn--primary">Browse Gallery</a>
+        <a href="story.html" class="btn btn--outline">Read Our Story</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__names">Kasun & Dushani</p>
+      <p class="footer__date">June 15, 2024</p>
+      <div class="footer__divider"></div>
+      <p class="footer__quote">"In every frame, a heartbeat. In every clip, a memory."</p>
+      <nav style="display:flex; justify-content:center; gap:2rem; margin-bottom:2rem; flex-wrap:wrap;">
+        <a href="index.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Home</a>
+        <a href="story.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Our Story</a>
+        <a href="gallery.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Gallery</a>
+        <a href="ceremony.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Ceremony</a>
+        <a href="celebration.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Celebration</a>
+        <a href="videos.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Videos</a>
+      </nav>
+      <p class="footer__bottom">Made with ♥ — A memory preserved in time</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/videos.js"></script>
+</body>
+</html>

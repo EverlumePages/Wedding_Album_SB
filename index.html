@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasun & Dushani — Our Wedding Memories</title>
+  <meta name="description" content="A beautiful collection of memories from Kasun & Dushani's wedding day. Browse photos, videos, and relive every magical moment.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/hero.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav nav--transparent" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kasun & Dushani</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="story.html" class="nav__link">Our Story</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="ceremony.html" class="nav__link">Ceremony</a>
+        <a href="celebration.html" class="nav__link">Celebration</a>
+        <a href="videos.html" class="nav__link">Videos</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="story.html" class="nav__mobile-link">Our Story</a>
+    <a href="gallery.html" class="nav__mobile-link">Gallery</a>
+    <a href="ceremony.html" class="nav__mobile-link">Ceremony</a>
+    <a href="celebration.html" class="nav__mobile-link">Celebration</a>
+    <a href="videos.html" class="nav__mobile-link">Videos</a>
+  </div>
+
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero film-grain" id="hero">
+    <!-- Full-screen background — couple walking away, bride's veil trailing -->
+    <img 
+      class="hero__bg" 
+      src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=85&auto=format"
+      alt="Wedding couple walking together"
+      loading="eager"
+    >
+    <div class="hero__overlay"></div>
+    <div class="hero__vignette"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">A Love Story Captured Forever</p>
+      <h1 class="hero__names">
+        Kasun <span class="hero__ampersand">&</span> Dushani
+      </h1>
+      <div class="hero__ornament">
+        <span class="hero__ornament-line"></span>
+        <span class="hero__ornament-diamond"></span>
+        <span class="hero__ornament-line"></span>
+      </div>
+      <p class="hero__date">June 15, 2024 — Tuscany, Italy</p>
+      <p class="hero__tagline">"In all the world, there is no heart for me like yours."</p>
+    </div>
+
+    <div class="hero__scroll" id="scroll-indicator">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+
+  <!-- ============ WELCOME SECTION ============ -->
+  <section class="welcome" id="welcome">
+    <div class="container">
+      <p class="welcome__script" data-animate="fade-up">Forever & Always</p>
+      <h2 class="welcome__heading" data-animate="fade-up" data-delay="1">Welcome to Our Memories</h2>
+      <div class="gold-divider" data-animate="fade-up" data-delay="2"></div>
+      <p class="welcome__text" data-animate="fade-up" data-delay="3">
+        Every glance, every laugh, every tear of joy — captured in this collection of our most cherished moments. 
+        This is more than just a photo album. It's our love story, told through the lens of those who were there.
+      </p>
+
+      <div class="welcome__quote-block" data-animate="fade-up" data-delay="4">
+        <span class="welcome__quote-mark">"</span>
+        <p class="welcome__quote">
+          The best thing to hold onto in life is each other. These photographs are windows into the moments 
+          that made our hearts overflow.
+        </p>
+        <p class="welcome__quote-author">— Kasun & Dushani</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FEATURED SECTIONS ============ -->
+  <section class="featured" id="featured">
+    <div class="featured__header">
+      <span class="section-subtitle" data-animate="fade-up">Explore Our Day</span>
+      <h2 class="section-heading" data-animate="fade-up" data-delay="1">Chapters of Our Story</h2>
+      <div class="gold-divider" data-animate="fade-up" data-delay="2"></div>
+    </div>
+
+    <div class="featured__grid">
+      <!-- Card 1: Gallery -->
+      <a href="gallery.html" class="featured-card" data-animate="fade-up" data-delay="1">
+        <img 
+          class="featured-card__img" 
+          src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80&auto=format" 
+          alt="Wedding gallery preview"
+          loading="lazy"
+        >
+        <div class="featured-card__content">
+          <span class="featured-card__label">Photography</span>
+          <h3 class="featured-card__title">The Gallery</h3>
+          <span class="featured-card__arrow">View All Photos →</span>
+        </div>
+      </a>
+
+      <!-- Card 2: Ceremony -->
+      <a href="ceremony.html" class="featured-card" data-animate="fade-up" data-delay="2">
+        <img 
+          class="featured-card__img" 
+          src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80&auto=format" 
+          alt="Wedding ceremony"
+          loading="lazy"
+        >
+        <div class="featured-card__content">
+          <span class="featured-card__label">Sacred Moments</span>
+          <h3 class="featured-card__title">The Ceremony</h3>
+          <span class="featured-card__arrow">Relive the Vows →</span>
+        </div>
+      </a>
+
+      <!-- Card 3: Celebration -->
+      <a href="celebration.html" class="featured-card" data-animate="fade-up" data-delay="3">
+        <img 
+          class="featured-card__img" 
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&auto=format" 
+          alt="Wedding celebration"
+          loading="lazy"
+        >
+        <div class="featured-card__content">
+          <span class="featured-card__label">Joy & Laughter</span>
+          <h3 class="featured-card__title">The Celebration</h3>
+          <span class="featured-card__arrow">See the Party →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============ PARALLAX DIVIDER ============ -->
+  <div class="parallax-divider">
+    <img 
+      class="parallax-divider__img" 
+      src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80&auto=format" 
+      alt="Wedding venue landscape"
+      loading="lazy"
+    >
+    <div class="parallax-divider__overlay"></div>
+    <div class="parallax-divider__content">
+      <p class="parallax-divider__text" data-animate="fade-up">"Two souls, one heart"</p>
+    </div>
+  </div>
+
+
+  <!-- ============ PHOTO STRIP (Infinite Scroll) ============ -->
+  <section class="photo-strip" id="photo-strip">
+    <div class="photo-strip__header">
+      <span class="section-subtitle" data-animate="fade-up">Moments in Motion</span>
+      <h2 class="section-heading" data-animate="fade-up" data-delay="1">A Glimpse of Our Day</h2>
+      <div class="gold-divider" data-animate="fade-up" data-delay="2"></div>
+    </div>
+
+    <div class="photo-strip__track">
+      <!-- Track 1 (original) -->
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+
+      <!-- Track 2 (duplicate for seamless loop) -->
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+      <div class="photo-strip__item">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&q=80&auto=format" alt="Wedding moment" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ STATS ============ -->
+  <section class="stats" id="stats">
+    <div class="stats__grid">
+      <div class="stats__item" data-animate="fade-up" data-delay="1">
+        <div class="stats__number" data-count="847" data-suffix="+">0</div>
+        <div class="stats__label">Photos Captured</div>
+      </div>
+      <div class="stats__item" data-animate="fade-up" data-delay="2">
+        <div class="stats__number" data-count="156">0</div>
+        <div class="stats__label">Guests Celebrated</div>
+      </div>
+      <div class="stats__item" data-animate="fade-up" data-delay="3">
+        <div class="stats__number" data-count="12">0</div>
+        <div class="stats__label">Video Memories</div>
+      </div>
+      <div class="stats__item" data-animate="fade-up" data-delay="4">
+        <div class="stats__number shimmer-text" data-count="1" data-suffix="">∞</div>
+        <div class="stats__label">Love Forever</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ SECOND PARALLAX ============ -->
+  <div class="parallax-divider">
+    <img 
+      class="parallax-divider__img" 
+      src="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?w=1920&q=80&auto=format" 
+      alt="Sunset romantic setting"
+      loading="lazy"
+    >
+    <div class="parallax-divider__overlay"></div>
+    <div class="parallax-divider__content">
+      <p class="parallax-divider__text" data-animate="fade-up">"The greatest thing you'll ever learn is just to love and be loved in return"</p>
+    </div>
+  </div>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <p class="footer__names">Kasun & Dushani</p>
+      <p class="footer__date">June 15, 2024</p>
+      <div class="footer__divider"></div>
+      <p class="footer__quote">"And so the adventure begins..."</p>
+      <nav style="display:flex; justify-content:center; gap:2rem; margin-bottom:2rem; flex-wrap:wrap;">
+        <a href="index.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Home</a>
+        <a href="story.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Our Story</a>
+        <a href="gallery.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Gallery</a>
+        <a href="ceremony.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Ceremony</a>
+        <a href="celebration.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Celebration</a>
+        <a href="videos.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Videos</a>
+      </nav>
+      <p class="footer__bottom">Made with ♥ — A memory preserved in time</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

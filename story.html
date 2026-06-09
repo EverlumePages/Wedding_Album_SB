@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Kasun & Dushani Wedding Memories</title>
+  <meta name="description" content="The story of Kasun & Dushani's wedding day — from getting ready to the final dance. A visual timeline of love.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/story.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav nav--transparent" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kasun & Dushani</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="story.html" class="nav__link nav__link--active">Our Story</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="ceremony.html" class="nav__link">Ceremony</a>
+        <a href="celebration.html" class="nav__link">Celebration</a>
+        <a href="videos.html" class="nav__link">Videos</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile-overlay" id="mobile-overlay">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="story.html" class="nav__mobile-link">Our Story</a>
+    <a href="gallery.html" class="nav__mobile-link">Gallery</a>
+    <a href="ceremony.html" class="nav__mobile-link">Ceremony</a>
+    <a href="celebration.html" class="nav__mobile-link">Celebration</a>
+    <a href="videos.html" class="nav__mobile-link">Videos</a>
+  </div>
+
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header">
+    <img 
+      class="page-header__bg" 
+      src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1920&q=85&auto=format" 
+      alt="Wedding preparation"
+      loading="eager"
+    >
+    <div class="page-header__overlay"></div>
+    <div class="page-header__content">
+      <p class="page-header__subtitle" data-animate="fade-up">Chapter by Chapter</p>
+      <h1 class="page-header__title" data-animate="fade-up" data-delay="1">Our Story</h1>
+      <p class="page-header__description" data-animate="fade-up" data-delay="2">
+        From the nervous butterflies of the morning to the last dance under the stars — every moment, woven into one unforgettable day.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============ INTRO ============ -->
+  <section class="story-intro">
+    <div class="container">
+      <p class="script-text" data-animate="fade-up">The Day Unfolded</p>
+      <div class="gold-divider" data-animate="fade-up" data-delay="1"></div>
+      <p class="story-intro__text" data-animate="fade-up" data-delay="2">
+        June 15th dawned golden over the Tuscan hills. The air was sweet with wildflowers, 
+        and the whole world seemed to hold its breath in anticipation. Here is how our love story 
+        unfolded that day, moment by beautiful moment.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="timeline" id="timeline">
+
+    <!-- 1. Getting Ready -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-left">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format" 
+          alt="Bride getting ready"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-right">
+        <span class="timeline__time">8:00 AM</span>
+        <h3 class="timeline__title">Getting Ready</h3>
+        <p class="timeline__description">
+          The morning began with soft laughter and champagne bubbles. Dushani's hands trembled 
+          with excitement as her veil was placed just so. In the next room, Kasun straightened his 
+          tie for the hundredth time, the biggest smile on his face.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. The Details -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-right">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=800&q=80&auto=format" 
+          alt="Wedding rings and details"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-left">
+        <span class="timeline__time">9:30 AM</span>
+        <h3 class="timeline__title">Every Little Detail</h3>
+        <p class="timeline__description">
+          From the hand-written vows folded in his breast pocket to the "something blue" 
+          sewn into the hem of her dress — every detail was a love letter to each other. 
+          The rings gleamed softly, ready for their moment.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. First Look -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-left">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80&auto=format" 
+          alt="Couple's first look"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-right">
+        <span class="timeline__time">11:00 AM</span>
+        <h3 class="timeline__title">The First Look</h3>
+        <p class="timeline__description">
+          Time stood still. Kasun turned to see Dushani walking toward him, radiant in the morning 
+          light. His eyes glistened. Her smile broke into laughter. It was the moment that set 
+          the tone for everything that followed.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. The Walk -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-right">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80&auto=format" 
+          alt="Walking down the aisle"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-left">
+        <span class="timeline__time">2:00 PM</span>
+        <h3 class="timeline__title">Walking Together</h3>
+        <p class="timeline__description">
+          Hand in hand, step by step, they walked into their forever. The aisle seemed to stretch 
+          toward infinity, lined with the faces of everyone who had witnessed their love grow. 
+          Dushani's veil danced in the gentle breeze.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. The Vows -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-left">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80&auto=format" 
+          alt="Exchanging vows"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-right">
+        <span class="timeline__time">2:30 PM</span>
+        <h3 class="timeline__title">The Vows</h3>
+        <p class="timeline__description">
+          "I promise to be your companion, your partner, and your best friend..." 
+          The words came out shaking, honest, perfect. Tears fell freely — from them, 
+          from everyone. This was the moment hearts became one.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6. The Kiss -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-right">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80&auto=format" 
+          alt="The first kiss"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-left">
+        <span class="timeline__time">2:45 PM</span>
+        <h3 class="timeline__title">The Kiss</h3>
+        <p class="timeline__description">
+          "You may now kiss..." — and the world erupted. The kiss was tender, the cheers were 
+          thunderous, and the confetti filled the sky like a thousand tiny prayers taking flight. 
+          Married. Finally, beautifully, forever married.
+        </p>
+      </div>
+    </div>
+
+    <!-- 7. The Celebration -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-left">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80&auto=format" 
+          alt="Wedding celebration"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-right">
+        <span class="timeline__time">5:00 PM</span>
+        <h3 class="timeline__title">Let's Celebrate</h3>
+        <p class="timeline__description">
+          The reception was pure magic. Fairy lights twinkled overhead, speeches brought 
+          both tears and laughter, and the dance floor never emptied. Every hug, every clink 
+          of glasses — a celebration of love itself.
+        </p>
+      </div>
+    </div>
+
+    <!-- 8. Golden Hour -->
+    <div class="timeline__item">
+      <div class="timeline__dot"></div>
+      <div class="timeline__image-wrap" data-animate="slide-right">
+        <img 
+          class="timeline__image" 
+          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80&auto=format" 
+          alt="Golden hour portraits"
+          loading="lazy"
+        >
+      </div>
+      <div class="timeline__text" data-animate="slide-left">
+        <span class="timeline__time">7:00 PM</span>
+        <h3 class="timeline__title">Golden Hour</h3>
+        <p class="timeline__description">
+          As the sun painted the sky in amber and rose, Dushani and Kasun stole away for a quiet 
+          moment together. These golden hour portraits are perhaps the most tender — two people, 
+          newly married, perfectly in love, perfectly at peace.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============ PARALLAX DIVIDER ============ -->
+  <div class="parallax-divider">
+    <img 
+      class="parallax-divider__img" 
+      src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=1920&q=80&auto=format" 
+      alt="Romantic sunset scene"
+      loading="lazy"
+    >
+    <div class="parallax-divider__overlay"></div>
+    <div class="parallax-divider__content">
+      <p class="parallax-divider__text" data-animate="fade-up">"And they lived happily ever after..."</p>
+    </div>
+  </div>
+
+
+  <!-- ============ STORY PHOTOS GRID ============ -->
+  <section class="story-photos">
+    <div class="container text-center">
+      <span class="section-subtitle" data-animate="fade-up">More Moments</span>
+      <h2 class="section-heading" data-animate="fade-up" data-delay="1">Captured in Time</h2>
+      <div class="gold-divider" data-animate="fade-up" data-delay="2"></div>
+    </div>
+
+    <div class="story-photos__grid">
+      <div class="photo-card" data-animate="scale-in" data-delay="1">
+        <img class="photo-card__img" src="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=800&q=80&auto=format" alt="Wedding moment" loading="lazy">
+        <div class="photo-card__overlay"><span class="photo-card__caption">A stolen glance</span></div>
+      </div>
+      <div class="photo-card" data-animate="scale-in" data-delay="2">
+        <img class="photo-card__img" src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=500&q=80&auto=format" alt="Wedding detail" loading="lazy">
+        <div class="photo-card__overlay"><span class="photo-card__caption">Delicate details</span></div>
+      </div>
+      <div class="photo-card" data-animate="scale-in" data-delay="3">
+        <img class="photo-card__img" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=500&q=80&auto=format" alt="Couple portrait" loading="lazy">
+        <div class="photo-card__overlay"><span class="photo-card__caption">Side by side</span></div>
+      </div>
+      <div class="photo-card" data-animate="scale-in" data-delay="4">
+        <img class="photo-card__img" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80&auto=format" alt="Wedding celebration" loading="lazy">
+        <div class="photo-card__overlay"><span class="photo-card__caption">Pure happiness</span></div>
+      </div>
+      <div class="photo-card" data-animate="scale-in" data-delay="5">
+        <img class="photo-card__img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=500&q=80&auto=format" alt="Wedding flowers" loading="lazy">
+        <div class="photo-card__overlay"><span class="photo-card__caption">Blooming love</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__names">Kasun & Dushani</p>
+      <p class="footer__date">June 15, 2024</p>
+      <div class="footer__divider"></div>
+      <p class="footer__quote">"Every love story is beautiful, but ours is my favorite."</p>
+      <nav style="display:flex; justify-content:center; gap:2rem; margin-bottom:2rem; flex-wrap:wrap;">
+        <a href="index.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Home</a>
+        <a href="story.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Our Story</a>
+        <a href="gallery.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Gallery</a>
+        <a href="ceremony.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Ceremony</a>
+        <a href="celebration.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Celebration</a>
+        <a href="videos.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Videos</a>
+      </nav>
+      <p class="footer__bottom">Made with ♥ — A memory preserved in time</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

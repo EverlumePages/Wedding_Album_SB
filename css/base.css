@@ -1,0 +1,340 @@
+/* ============================================================
+   WEDDING MEMORIES — Design System (base.css)
+   A warm, romantic, cinematic design language
+   ============================================================ */
+
+/* --- CSS Reset & Box Model --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* --- Design Tokens (Custom Properties) --- */
+:root {
+  /* Color Palette — Golden Hour Romance */
+  --color-cream:       #FDF6EC;
+  --color-cream-dark:  #F5EDE0;
+  --color-champagne:   #F5E6D3;
+  --color-blush:       #E8C4B8;
+  --color-blush-light: #F2D8CF;
+  --color-rose:        #C9958E;
+  --color-rose-deep:   #B07A73;
+  --color-wine:        #722F37;
+  --color-wine-dark:   #5A252D;
+  --color-charcoal:    #2D2926;
+  --color-charcoal-light: #4A4543;
+  --color-gold:        #C5A572;
+  --color-gold-light:  #D4BA8E;
+  --color-gold-shimmer:#E8D5A8;
+  --color-white:       #FFFFFF;
+  --color-black:       #1A1614;
+  --color-overlay:     rgba(26, 22, 20, 0.55);
+  --color-overlay-light: rgba(26, 22, 20, 0.3);
+  --color-glass:       rgba(253, 246, 236, 0.15);
+  --color-glass-border:rgba(197, 165, 114, 0.25);
+
+  /* Typography */
+  --font-display:  'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:     'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-accent:   'Great Vibes', cursive;
+  --font-sans:     'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes — Fluid Scale */
+  --text-xs:    clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --text-sm:    clamp(0.8rem, 0.75rem + 0.3vw, 0.95rem);
+  --text-base:  clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
+  --text-md:    clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+  --text-lg:    clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
+  --text-xl:    clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+  --text-2xl:   clamp(1.8rem, 1.4rem + 1.6vw, 2.8rem);
+  --text-3xl:   clamp(2.2rem, 1.6rem + 2.2vw, 3.8rem);
+  --text-4xl:   clamp(2.8rem, 2rem + 3vw, 5rem);
+  --text-hero:  clamp(3.5rem, 2.5rem + 4vw, 7rem);
+  --text-script:clamp(2.5rem, 2rem + 2vw, 4.5rem);
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-6xl: 12rem;
+
+  /* Layout */
+  --max-width:      1200px;
+  --max-width-wide: 1440px;
+  --max-width-narrow: 800px;
+  --nav-height:     80px;
+  --border-radius:  8px;
+  --border-radius-lg: 16px;
+
+  /* Transitions */
+  --ease-smooth:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-elegant: cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-fast:   0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow:   0.8s;
+  --duration-reveal: 1.2s;
+
+  /* Shadows */
+  --shadow-soft:   0 4px 20px rgba(45, 41, 38, 0.08);
+  --shadow-medium: 0 8px 40px rgba(45, 41, 38, 0.12);
+  --shadow-heavy:  0 16px 60px rgba(45, 41, 38, 0.18);
+  --shadow-gold:   0 4px 30px rgba(197, 165, 114, 0.15);
+}
+
+
+/* --- Base Typography --- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-wine);
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl);  }
+h5 { font-size: var(--text-lg);  }
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.8;
+  color: var(--color-charcoal-light);
+  max-width: 65ch;
+}
+
+.script-text {
+  font-family: var(--font-accent);
+  font-size: var(--text-script);
+  color: var(--color-gold);
+  font-weight: 400;
+}
+
+.body-serif {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.label-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-rose);
+  font-weight: 500;
+}
+
+.quote-text {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-charcoal-light);
+  line-height: 1.6;
+  position: relative;
+  padding-left: var(--space-xl);
+  border-left: 2px solid var(--color-gold);
+}
+
+
+/* --- Layout Utilities --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container-wide {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container-narrow {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.section {
+  padding: var(--space-5xl) 0;
+}
+
+.section-lg {
+  padding: var(--space-6xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* --- Decorative Elements --- */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: var(--space-xl) auto;
+  color: var(--color-gold);
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.ornament-icon {
+  font-size: 1.2rem;
+  color: var(--color-gold);
+}
+
+.gold-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: var(--space-lg) auto;
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-rose);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-wine);
+  margin-bottom: var(--space-md);
+}
+
+.section-description {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-blush);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose);
+}
+
+
+/* --- Selection --- */
+::selection {
+  background: var(--color-blush);
+  color: var(--color-wine);
+}
+
+
+/* --- Responsive Breakpoints (Mobile First) --- */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  .container,
+  .container-wide,
+  .container-narrow {
+    padding: 0 var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section-lg {
+    padding: var(--space-4xl) 0;
+  }
+}

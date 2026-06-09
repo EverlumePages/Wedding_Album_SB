@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery — Kasun & Dushani Wedding Memories</title>
+  <meta name="description" content="Browse through hundreds of stunning photos from Kasun & Dushani's wedding. A masonry gallery of every beautiful moment.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/gallery.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav nav--transparent" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kasun & Dushani</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="story.html" class="nav__link">Our Story</a>
+        <a href="gallery.html" class="nav__link nav__link--active">Gallery</a>
+        <a href="ceremony.html" class="nav__link">Ceremony</a>
+        <a href="celebration.html" class="nav__link">Celebration</a>
+        <a href="videos.html" class="nav__link">Videos</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile-overlay" id="mobile-overlay">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="story.html" class="nav__mobile-link">Our Story</a>
+    <a href="gallery.html" class="nav__mobile-link">Gallery</a>
+    <a href="ceremony.html" class="nav__mobile-link">Ceremony</a>
+    <a href="celebration.html" class="nav__mobile-link">Celebration</a>
+    <a href="videos.html" class="nav__mobile-link">Videos</a>
+  </div>
+
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header">
+    <img 
+      class="page-header__bg" 
+      src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=85&auto=format" 
+      alt="Wedding venue"
+      loading="eager"
+    >
+    <div class="page-header__overlay"></div>
+    <div class="page-header__content">
+      <p class="page-header__subtitle" data-animate="fade-up">Our Collection</p>
+      <h1 class="page-header__title" data-animate="fade-up" data-delay="1">The Gallery</h1>
+      <p class="page-header__description" data-animate="fade-up" data-delay="2">
+        Every photograph is a love letter written in light. Browse through our complete collection of wedding memories.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery-section">
+    <div class="container text-center">
+      <!-- Stats -->
+      <div class="gallery-stats" data-animate="fade-up">
+        <div class="gallery-stats__item">
+          <div class="gallery-stats__number">56</div>
+          <div class="gallery-stats__label">Photos Below</div>
+        </div>
+        <div class="gallery-stats__item">
+          <div class="gallery-stats__number">6</div>
+          <div class="gallery-stats__label">Categories</div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" data-animate="fade-up" data-delay="1">
+        <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="couple">Couple</button>
+        <button class="filter-btn" data-filter="ceremony">Ceremony</button>
+        <button class="filter-btn" data-filter="details">Details</button>
+        <button class="filter-btn" data-filter="reception">Reception</button>
+        <button class="filter-btn" data-filter="candid">Candid</button>
+      </div>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="masonry" id="gallery-masonry">
+
+      <!-- ===== COUPLE PHOTOS ===== -->
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=90&auto=format"
+           data-caption="Walking into forever">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80&auto=format" alt="Couple walking together" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Walking into forever</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1400&q=90&auto=format"
+           data-caption="A moment of tenderness at the altar">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80&auto=format" alt="Wedding ceremony" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">A moment of tenderness</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1400&q=90&auto=format"
+           data-caption="Golden hour embrace">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&auto=format" alt="Golden hour couple" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Golden hour embrace</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=1400&q=90&auto=format"
+           data-caption="The rings that bind">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=600&q=80&auto=format" alt="Wedding rings" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The rings that bind</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1529636798458-92182e662485?w=1400&q=90&auto=format"
+           data-caption="The first kiss as husband and wife">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=600&q=80&auto=format" alt="Wedding kiss" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The first kiss</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1400&q=90&auto=format"
+           data-caption="Reception magic under the lights">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&auto=format" alt="Reception decor" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Reception magic</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1400&q=90&auto=format"
+           data-caption="Together, always">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80&auto=format" alt="Couple together" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Together, always</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1400&q=90&auto=format"
+           data-caption="Bridal elegance">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80&auto=format" alt="Bridal details" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Bridal elegance</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=1400&q=90&auto=format"
+           data-caption="A tender moment between two souls">
+        <img src="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=600&q=80&auto=format" alt="Couple portrait" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">A tender moment</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=1400&q=90&auto=format"
+           data-caption="The ceremony begins">
+        <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600&q=80&auto=format" alt="Wedding ceremony" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The ceremony begins</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1400&q=90&auto=format"
+           data-caption="Side by side, heart to heart">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=600&q=80&auto=format" alt="Couple side by side" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Side by side</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=1400&q=90&auto=format"
+           data-caption="Floral perfection">
+        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600&q=80&auto=format" alt="Wedding flowers" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Floral perfection</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <!-- ===== MORE COUPLE ===== -->
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1400&q=90&auto=format"
+           data-caption="Lost in each other's eyes">
+        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80&auto=format" alt="Couple gazing" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Lost in each other</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?w=1400&q=90&auto=format"
+           data-caption="Evening enchantment">
+        <img src="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?w=600&q=80&auto=format" alt="Evening reception" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Evening enchantment</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400&q=90&auto=format"
+           data-caption="Bouquet of dreams">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80&auto=format" alt="Wedding bouquet" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Bouquet of dreams</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1400&q=90&auto=format"
+           data-caption="Morning preparations">
+        <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&q=80&auto=format" alt="Getting ready" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Morning preparations</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <!-- ===== ADDITIONAL PHOTOS — Expanded Collection ===== -->
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=1400&q=90&auto=format"
+           data-caption="Dancing under the stars">
+        <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=600&q=80&auto=format" alt="Wedding dance" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Dancing under the stars</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1400&q=90&auto=format"
+           data-caption="Enchanted venue">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&auto=format" alt="Wedding venue" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Enchanted venue</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=1400&q=90&auto=format"
+           data-caption="Exchange of promises">
+        <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=600&q=80&auto=format" alt="Ring exchange" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Exchange of promises</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=1400&q=90&auto=format"
+           data-caption="Joyful moments with loved ones">
+        <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=600&q=80&auto=format" alt="Wedding guests" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Joyful celebrations</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=1400&q=90&auto=format"
+           data-caption="The bridal shoes">
+        <img src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=600&q=80&auto=format" alt="Bridal shoes" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The bridal shoes</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1525772764200-be829a350797?w=1400&q=90&auto=format"
+           data-caption="In love, in light">
+        <img src="https://images.unsplash.com/photo-1525772764200-be829a350797?w=600&q=80&auto=format" alt="Couple portrait" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">In love, in light</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1400&q=90&auto=format"
+           data-caption="A night to remember">
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80&auto=format" alt="Celebration confetti" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">A night to remember</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1400&q=90&auto=format"
+           data-caption="Walking down the aisle">
+        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&q=80&auto=format" alt="Bride walking" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Walking down the aisle</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1550784343-6bd0ce5ef2b0?w=1400&q=90&auto=format"
+           data-caption="Elegant table setting">
+        <img src="https://images.unsplash.com/photo-1550784343-6bd0ce5ef2b0?w=600&q=80&auto=format" alt="Table setting" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Elegant table setting</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=1400&q=90&auto=format"
+           data-caption="Under the veil">
+        <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=600&q=80&auto=format" alt="Under the veil" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Under the veil</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1400&q=90&auto=format"
+           data-caption="Laughter and love">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80&auto=format" alt="Wedding celebration" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Laughter and love</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1400&q=90&auto=format"
+           data-caption="Flowers everywhere">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&auto=format" alt="Floral arrangement" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Flowers everywhere</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1521080755838-d2311117f767?w=1400&q=90&auto=format"
+           data-caption="Silhouette of love">
+        <img src="https://images.unsplash.com/photo-1521080755838-d2311117f767?w=600&q=80&auto=format" alt="Couple silhouette" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Silhouette of love</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=90&auto=format"
+           data-caption="Champagne toasts">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80&auto=format" alt="Champagne toast" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Champagne toasts</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=90&auto=format"
+           data-caption="Hand in hand">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80&auto=format" alt="Holding hands" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Hand in hand</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=1400&q=90&auto=format"
+           data-caption="Confetti shower">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=600&q=80&auto=format" alt="Confetti celebration" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Confetti shower</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1522057306606-8d84be795b45?w=1400&q=90&auto=format"
+           data-caption="The wedding cake">
+        <img src="https://images.unsplash.com/photo-1522057306606-8d84be795b45?w=600&q=80&auto=format" alt="Wedding cake" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The wedding cake</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=1400&q=90&auto=format"
+           data-caption="First dance magic">
+        <img src="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=600&q=80&auto=format" alt="First dance" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">First dance magic</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1400&q=90&auto=format"
+           data-caption="Love letters and details">
+        <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=80&auto=format" alt="Wedding stationery" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Love letters</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1400&q=90&auto=format"
+           data-caption="Night sparklers">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80&auto=format" alt="Sparklers" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Night sparklers</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=1400&q=90&auto=format"
+           data-caption="Sunset serenade">
+        <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=600&q=80&auto=format" alt="Sunset couple" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Sunset serenade</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=90&auto=format"
+           data-caption="Feast of celebrations">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format" alt="Wedding dinner" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Feast of celebrations</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?w=1400&q=90&auto=format"
+           data-caption="Through the veil">
+        <img src="https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?w=600&q=80&auto=format" alt="Veil moment" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Through the veil</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1400&q=90&auto=format"
+           data-caption="Rustic charm">
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&q=80&auto=format" alt="Rustic wedding details" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Rustic charm</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1400&q=90&auto=format"
+           data-caption="Embracing happiness">
+        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80&auto=format" alt="Couple embrace" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Embracing happiness</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1504391095176-e4ffb4506cfe?w=1400&q=90&auto=format"
+           data-caption="Friends and family">
+        <img src="https://images.unsplash.com/photo-1504391095176-e4ffb4506cfe?w=600&q=80&auto=format" alt="Friends toasting" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Friends and family</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1400&q=90&auto=format"
+           data-caption="Dance floor magic">
+        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&q=80&auto=format" alt="Dance floor" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Dance floor magic</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1400&q=90&auto=format"
+           data-caption="Garden ceremony setup">
+        <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=600&q=80&auto=format" alt="Garden ceremony" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Garden ceremony</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1585939745788-a3fc0259c19c?w=1400&q=90&auto=format"
+           data-caption="Forehead kisses">
+        <img src="https://images.unsplash.com/photo-1585939745788-a3fc0259c19c?w=600&q=80&auto=format" alt="Forehead kiss" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Forehead kisses</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=1400&q=90&auto=format"
+           data-caption="The altar awaits">
+        <img src="https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=600&q=80&auto=format" alt="Altar decoration" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">The altar awaits</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1400&q=90&auto=format"
+           data-caption="Cheers to love">
+        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&q=80&auto=format" alt="Celebration toast" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Cheers to love</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1531747056868-e1b570a55cf1?w=1400&q=90&auto=format"
+           data-caption="Blossoming centerpiece">
+        <img src="https://images.unsplash.com/photo-1531747056868-e1b570a55cf1?w=600&q=80&auto=format" alt="Flower centerpiece" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Blossoming beauty</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1537907510278-752e03e8e5f1?w=1400&q=90&auto=format"
+           data-caption="Love is in the air">
+        <img src="https://images.unsplash.com/photo-1537907510278-752e03e8e5f1?w=600&q=80&auto=format" alt="Romantic couple" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Love is in the air</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=1400&q=90&auto=format"
+           data-caption="String lights and magic">
+        <img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600&q=80&auto=format" alt="String lights" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">String lights and magic</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1400&q=90&auto=format"
+           data-caption="Walking into the sunset">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80&auto=format" alt="Couple sunset walk" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Into the sunset</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=1400&q=90&auto=format"
+           data-caption="Candles and ambiance">
+        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=600&q=80&auto=format" alt="Candle ambiance" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Candles and ambiance</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="ceremony" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=1400&q=90&auto=format"
+           data-caption="Ring ceremony">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=600&q=80&auto=format" alt="Ring exchange" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Ring ceremony</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=1400&q=90&auto=format"
+           data-caption="Happy tears">
+        <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=600&q=80&auto=format" alt="Happy moment" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Happy tears</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1400&q=90&auto=format"
+           data-caption="Together forever">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80&auto=format" alt="Couple together" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Together forever</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="reception" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?w=1400&q=90&auto=format"
+           data-caption="Under the canopy of lights">
+        <img src="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?w=600&q=80&auto=format" alt="Canopy of lights" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Under the canopy</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1561133555-4f93-4aa5-a8b5-aee7c7be88bb?w=1400&q=90&auto=format"
+           data-caption="Floral arch perfection">
+        <img src="https://images.unsplash.com/photo-1561133555-4f93-4aa5-a8b5-aee7c7be88bb?w=600&q=80&auto=format" alt="Floral arch" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Floral arch</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1400&q=90&auto=format"
+           data-caption="Love story">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&auto=format" alt="Love story" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Our love story</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="candid" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1504391095176-e4ffb4506cfe?w=1400&q=90&auto=format"
+           data-caption="Group celebration">
+        <img src="https://images.unsplash.com/photo-1504391095176-e4ffb4506cfe?w=600&q=80&auto=format" alt="Group celebration" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Group celebration</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="details" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=90&auto=format"
+           data-caption="Golden champagne glow">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80&auto=format" alt="Champagne" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Golden champagne</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+      <div class="masonry__item" data-category="couple" data-animate="scale-in"
+           data-lightbox="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=1400&q=90&auto=format"
+           data-caption="Forever yours">
+        <img src="https://images.unsplash.com/photo-1549417229-7686ac5595fd?w=600&q=80&auto=format" alt="Couple moment" loading="lazy">
+        <div class="masonry__overlay"><span class="masonry__caption">Forever yours</span></div>
+        <span class="masonry__icon">⤢</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+    <div class="lightbox__img-container">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    </div>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">›</button>
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+    <span class="lightbox__counter" id="lightbox-counter"></span>
+  </div>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__names">Kasun & Dushani</p>
+      <p class="footer__date">June 15, 2024</p>
+      <div class="footer__divider"></div>
+      <p class="footer__quote">"A picture is worth a thousand words, but our love is beyond words."</p>
+      <nav style="display:flex; justify-content:center; gap:2rem; margin-bottom:2rem; flex-wrap:wrap;">
+        <a href="index.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Home</a>
+        <a href="story.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Our Story</a>
+        <a href="gallery.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Gallery</a>
+        <a href="ceremony.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Ceremony</a>
+        <a href="celebration.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Celebration</a>
+        <a href="videos.html" class="nav__link" style="color:var(--color-champagne); font-size:0.7rem;">Videos</a>
+      </nav>
+      <p class="footer__bottom">Made with ♥ — A memory preserved in time</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

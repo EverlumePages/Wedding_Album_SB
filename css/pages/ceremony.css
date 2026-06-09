@@ -1,0 +1,208 @@
+/* ============================================================
+   WEDDING MEMORIES — The Ceremony (ceremony.css)
+   ============================================================ */
+
+.ceremony-intro {
+  padding: var(--space-5xl) 0;
+  text-align: center;
+  background: var(--color-cream);
+}
+
+.ceremony-intro__text {
+  max-width: 650px;
+  margin: var(--space-lg) auto 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  line-height: 1.9;
+}
+
+
+/* ---- CEREMONY STORY BLOCKS ---- */
+.ceremony-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+}
+
+.ceremony-block:nth-child(even) {
+  direction: rtl;
+}
+
+.ceremony-block:nth-child(even) > * {
+  direction: ltr;
+}
+
+.ceremony-block__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.ceremony-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.ceremony-block:hover .ceremony-block__image img {
+  transform: scale(1.03);
+}
+
+.ceremony-block__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-4xl);
+  background: var(--color-cream);
+}
+
+.ceremony-block:nth-child(even) .ceremony-block__content {
+  background: var(--color-cream-dark);
+}
+
+.ceremony-block__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+.ceremony-block__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-wine);
+  margin-bottom: var(--space-lg);
+}
+
+.ceremony-block__description {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  line-height: 1.9;
+  max-width: 480px;
+}
+
+.ceremony-block__quote {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-charcoal-light);
+  margin-top: var(--space-2xl);
+  padding-left: var(--space-xl);
+  border-left: 2px solid var(--color-gold);
+  max-width: 450px;
+}
+
+
+/* ---- DETAILS GRID ---- */
+.ceremony-details {
+  padding: var(--space-5xl) 0;
+  background: var(--color-cream-dark);
+}
+
+.ceremony-details__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  max-width: var(--max-width-wide);
+  margin: var(--space-3xl) auto 0;
+  padding: 0 var(--space-xl);
+}
+
+.ceremony-details__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.ceremony-details__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.ceremony-details__item:first-child {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.ceremony-details__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.ceremony-details__item:hover img {
+  transform: scale(1.05);
+}
+
+.ceremony-details__item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  background: linear-gradient(to top, rgba(26,22,20,0.6), transparent);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.ceremony-details__item:hover .ceremony-details__item-overlay {
+  opacity: 1;
+}
+
+.ceremony-details__item-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-cream);
+  font-style: italic;
+}
+
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .ceremony-block__content {
+    padding: var(--space-2xl);
+  }
+
+  .ceremony-details__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ceremony-block {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ceremony-block:nth-child(even) {
+    direction: ltr;
+  }
+
+  .ceremony-block__image {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .ceremony-block__content {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  .ceremony-details__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ceremony-details__item:first-child {
+    grid-row: span 1;
+    aspect-ratio: 3/4;
+  }
+}

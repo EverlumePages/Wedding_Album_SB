@@ -1,0 +1,252 @@
+/* ============================================================
+   WEDDING MEMORIES — Our Story Timeline (story.css)
+   ============================================================ */
+
+.story-intro {
+  padding: var(--space-5xl) 0;
+  text-align: center;
+  background: var(--color-cream);
+}
+
+.story-intro__text {
+  max-width: 650px;
+  margin: var(--space-lg) auto 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  line-height: 1.9;
+}
+
+
+/* ---- TIMELINE ---- */
+.timeline {
+  position: relative;
+  padding: var(--space-4xl) 0 var(--space-5xl);
+  background: var(--color-cream);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-gold) 10%,
+    var(--color-gold) 90%,
+    transparent
+  );
+}
+
+.timeline__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xl);
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-4xl);
+  padding: 0 var(--space-xl);
+  position: relative;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Alternating layout */
+.timeline__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline__item:nth-child(even) .timeline__text {
+  text-align: right;
+}
+
+/* Timeline dot */
+.timeline__dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 3px solid var(--color-cream);
+  box-shadow: 0 0 0 3px var(--color-gold), var(--shadow-gold);
+  z-index: 2;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.timeline__item:hover .timeline__dot {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Timeline image */
+.timeline__image-wrap {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+
+.timeline__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.timeline__item:hover .timeline__image {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-heavy);
+}
+
+.timeline__image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--border-radius-lg);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+  pointer-events: none;
+}
+
+.timeline__item:hover .timeline__image-wrap::after {
+  opacity: 0.4;
+}
+
+/* Timeline text */
+.timeline__text {
+  flex: 1;
+  max-width: 400px;
+}
+
+.timeline__time {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-wine);
+  margin-bottom: var(--space-md);
+}
+
+.timeline__description {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  line-height: 1.8;
+}
+
+
+/* ---- STORY PHOTOS GRID ---- */
+.story-photos {
+  padding: var(--space-4xl) 0;
+  background: var(--color-cream-dark);
+}
+
+.story-photos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: var(--space-md);
+  max-width: var(--max-width);
+  margin: var(--space-3xl) auto 0;
+  padding: 0 var(--space-xl);
+}
+
+.story-photos__grid .photo-card {
+  aspect-ratio: 1;
+}
+
+.story-photos__grid .photo-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.story-photos__grid .photo-card:nth-child(4) {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .timeline__item {
+    gap: var(--space-2xl);
+  }
+
+  .timeline__image-wrap {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline__item,
+  .timeline__item:nth-child(even) {
+    flex-direction: column;
+    padding-left: 60px;
+    gap: var(--space-lg);
+  }
+
+  .timeline__item:nth-child(even) .timeline__text {
+    text-align: left;
+  }
+
+  .timeline__dot {
+    left: 24px;
+    top: 24px;
+    transform: translate(-50%, 0);
+  }
+
+  .timeline__item:hover .timeline__dot {
+    transform: translate(-50%, 0) scale(1.3);
+  }
+
+  .timeline__image-wrap {
+    max-width: 100%;
+  }
+
+  .story-photos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-photos__grid .photo-card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+    aspect-ratio: 16/9;
+  }
+
+  .story-photos__grid .photo-card:nth-child(4) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-photos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-photos__grid .photo-card:nth-child(1),
+  .story-photos__grid .photo-card:nth-child(4) {
+    grid-column: span 1;
+  }
+}

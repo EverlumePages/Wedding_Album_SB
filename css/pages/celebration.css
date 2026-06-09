@@ -1,0 +1,312 @@
+/* ============================================================
+   WEDDING MEMORIES — The Celebration (celebration.css)
+   ============================================================ */
+
+.celebration-intro {
+  padding: var(--space-5xl) 0;
+  text-align: center;
+  background: var(--color-cream);
+}
+
+.celebration-intro__text {
+  max-width: 650px;
+  margin: var(--space-lg) auto 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-charcoal-light);
+  line-height: 1.9;
+}
+
+
+/* ---- HIGHLIGHT MOMENTS ---- */
+.highlights {
+  padding: var(--space-4xl) 0;
+  background: var(--color-cream);
+}
+
+.highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-md);
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.highlight-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.highlight-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.highlight-card:hover img {
+  transform: scale(1.05);
+}
+
+.highlight-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(26, 22, 20, 0.65) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-xl);
+}
+
+.highlight-card:hover .highlight-card__overlay {
+  opacity: 1;
+}
+
+.highlight-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.highlight-card__caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(253, 246, 236, 0.75);
+  font-style: italic;
+}
+
+/* Bento-style grid placement */
+.highlight-card:nth-child(1) {
+  grid-column: span 8;
+  aspect-ratio: 16/9;
+}
+
+.highlight-card:nth-child(2) {
+  grid-column: span 4;
+  aspect-ratio: 3/4;
+}
+
+.highlight-card:nth-child(3) {
+  grid-column: span 4;
+  aspect-ratio: 3/4;
+}
+
+.highlight-card:nth-child(4) {
+  grid-column: span 4;
+  aspect-ratio: 1;
+}
+
+.highlight-card:nth-child(5) {
+  grid-column: span 4;
+  aspect-ratio: 1;
+}
+
+.highlight-card:nth-child(6) {
+  grid-column: span 6;
+  aspect-ratio: 16/10;
+}
+
+.highlight-card:nth-child(7) {
+  grid-column: span 6;
+  aspect-ratio: 16/10;
+}
+
+
+/* ---- GUEST MOMENTS ---- */
+.guests {
+  padding: var(--space-5xl) 0;
+  background: var(--color-cream-dark);
+}
+
+.guests__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-sm);
+  max-width: var(--max-width-wide);
+  margin: var(--space-3xl) auto 0;
+  padding: 0 var(--space-xl);
+}
+
+.guest-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.guest-photo:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: var(--shadow-heavy);
+}
+
+.guest-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+  filter: brightness(0.95);
+}
+
+.guest-photo:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+
+/* ---- TABLE DETAILS / DECOR ---- */
+.decor-section {
+  padding: var(--space-5xl) 0;
+  background: var(--color-cream);
+}
+
+.decor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: var(--max-width);
+  margin: var(--space-3xl) auto 0;
+  padding: 0 var(--space-xl);
+}
+
+.decor-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  aspect-ratio: 4/5;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.decor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.decor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.decor-card:hover img {
+  transform: scale(1.06);
+}
+
+.decor-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl);
+  background: linear-gradient(to top, rgba(26,22,20,0.6), transparent);
+  transform: translateY(100%);
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.decor-card:hover .decor-card__overlay {
+  transform: translateY(0);
+}
+
+.decor-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  color: var(--color-white);
+}
+
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .highlights__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .highlight-card:nth-child(1) {
+    grid-column: span 6;
+  }
+
+  .highlight-card:nth-child(2) {
+    grid-column: span 3;
+  }
+
+  .highlight-card:nth-child(3) {
+    grid-column: span 3;
+  }
+
+  .highlight-card:nth-child(4) {
+    grid-column: span 3;
+  }
+
+  .highlight-card:nth-child(5) {
+    grid-column: span 3;
+  }
+
+  .highlight-card:nth-child(6) {
+    grid-column: span 3;
+  }
+
+  .highlight-card:nth-child(7) {
+    grid-column: span 3;
+  }
+
+  .guests__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .highlights__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlight-card:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .highlight-card:nth-child(n+2) {
+    grid-column: span 1;
+    aspect-ratio: 1;
+  }
+
+  .guests__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .decor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .guests__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .decor-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+}
